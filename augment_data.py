@@ -91,7 +91,7 @@ for iter, line in enumerate(file.readlines()[1:]): # first line of traininData.c
 
     wavfile = 'tmp.wav'
     mp3_file_abs_path=os.path.join(config.DATASET_MP3_DIR,filepath)
-    command='ffmpeg -i'+' /home/mt0/16CS60D03/LanguageID/dataset/Training/' + filepath+' '+ wavfile
+    command='ffmpeg -i '+mp3_file_abs_path+' '+ wavfile
     os.system(command)
     for augmentIdx in range(0, 20):
         alpha = np.random.uniform(0.9, 1.1)
